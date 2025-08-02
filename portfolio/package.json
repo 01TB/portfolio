@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "portfolio-tsitohaina",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,11 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^10.16.0",
-    "lucide-react": "^0.263.1",
-    "next": "^14.2.31",
+    "next": "14.0.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "framer-motion": "^10.16.0",
+    "lucide-react": "^0.263.1"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -71,19 +71,43 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Profile Image */}
+          {/* Profile Image - Optimisé pour l'image fournie */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative">
-              <div className="w-80 h-80 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full"></div>
-              {/* Placeholder for profile image */}
-              <div className="absolute inset-4 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 text-lg">Photo professionnelle</span>
+            <div className="relative w-80 h-96 lg:w-96 lg:h-[28rem]">
+              {/* Background gradient avec forme plus adaptée au portrait */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 rounded-3xl shadow-2xl transform rotate-3"></div>
+              
+              {/* Cadre pour l'image */}
+              <div className="absolute inset-4 rounded-2xl overflow-hidden border-4 border-white shadow-lg bg-white">
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Tsitohaina Berthin RAMANANKIRAHINA"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                  sizes="(max-width: 768px) 320px, 384px"
+                  onError={(e) => {
+                    // Fallback en cas d'erreur de chargement
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.classList.add('bg-gradient-to-br', 'from-gray-100', 'to-gray-200', 'flex', 'items-center', 'justify-center');
+                      parent.innerHTML = '<div class="text-center"><div class="text-4xl font-bold text-gray-400 mb-2">TB</div><div class="text-gray-500 text-sm">Photo de profil</div></div>';
+                    }
+                  }}
+                />
               </div>
+              
+              {/* Éléments décoratifs repositionnés */}
+              <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary-500 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-primary-300 rounded-full opacity-60 animate-pulse delay-700"></div>
+              <div className="absolute top-1/2 -right-4 w-4 h-4 bg-primary-400 rounded-full opacity-80"></div>
             </div>
           </motion.div>
         </div>
