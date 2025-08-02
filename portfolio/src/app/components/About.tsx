@@ -18,7 +18,7 @@ const About = () => {
           </h2>
           <div className="prose prose-lg mx-auto">
             <p className="text-lg text-gray-700 leading-relaxed">
-              Étudiant en 2e année d'informatique à IT University Madagascar, je me spécialise 
+              Étudiant en 3e année d'informatique à IT University Madagascar, je me spécialise 
               dans le développement web et logiciel. Je maîtrise des technologies comme Django, 
               React, Java, et je m'intéresse particulièrement aux architectures backend robustes 
               et aux bases de données.
