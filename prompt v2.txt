@@ -1,0 +1,90 @@
+Crée un portfolio moderne et responsive pour un étudiant développeur en utilisant Next.js et Tailwind CSS. Le portfolio doit inclure les sections suivantes avec ce contenu :
+
+    Hero Section
+
+        Nom : Tsitohaina Berthin RAMANANKIRAHINA
+
+        Titre : Étudiant développeur en informatique – IT University Madagascar
+
+        Phrase d'accroche : « Passionné par le développement web et logiciel, je construis des projets en Python, Java et JavaScript pour apprendre et innover. »
+
+        Bouton "Télécharger mon CV" (lien vers un fichier PDF).
+
+        Espace pour une photo professionnelle (placeholder si absent).
+
+    À propos (About Me)
+
+        Texte : « Étudiant en 2e année d’informatique à IT University Madagascar, je me spécialise dans le développement web et logiciel. Je maîtrise des technologies comme Django, React, Java, et je m’intéresse particulièrement aux architectures backend robustes et aux bases de données. Mon objectif est de participer à des projets concrets pour développer mon expertise et contribuer à des solutions innovantes. »
+
+    Compétences (Skills)
+
+        Organisées par catégories avec icônes (ex. 💻, 🌐) :
+
+            Langages : Python, Java, JavaScript, PHP, C, C++, C#
+
+            Frameworks : Django, Spring Boot, React.js, Node.js, NestJS, JSP
+
+            Bases de données : MySQL, PostgreSQL, Oracle
+
+            Outils : Git, MVC, gestion de projet web
+
+    Projets (Projects)
+
+        Cartes cliquables pour chaque projet avec :
+
+            Titre
+
+            Technologies (badges Tailwind)
+
+            Description courte
+
+            Liens GitHub/Démo (boutons)
+
+        Exemples de projets :
+
+            Plateforme de gestion de bibliothèque (Java JSP & MySQL)
+
+            Application de streaming vidéo (Java & Spring Boot)
+
+    Formation (Education)
+
+        Liste chronologique :
+
+            IT University (2023–2026) – Licence en Informatique
+
+            ESTACA (2022–2023) – Ingénierie automobile
+
+            Lycée Français de Tananarive – Baccalauréat (Mention Bien)
+
+    Contact
+
+        Icônes cliquables pour :
+
+            Email (tsitohaina.berthin@gmail.com)
+
+            LinkedIn (www.linkedin.com/in/tsitohaina-berthin-ramanankirahina-042aa4252)
+
+            GitHub (https://github.com/01TB)
+
+        Un formulaire de contact pour envoyer un mail à mon adresse mail : Nom, Email, Téléphone, Objet, Message.
+
+
+Instructions techniques :
+
+    Utilise Next.js 14 (App Router) et Tailwind CSS pour le styling.
+
+    Ajoute des animations subtiles (ex. Framer Motion pour les hover).
+
+    Rendre le design épuré, avec une palette de couleurs professionnelle (bleu/noir/gris).
+
+    Optimisé pour mobile (navbar responsive, boutons accessibles).
+
+    Génère le code sous forme de fichiers structurés (ex. components/, app/).
+
+Livrables attendus :
+
+    Code complet du projet (JSX/TSX, CSS).
+
+    Instructions pour lancer le projet (npm run dev).
+
+    Suggestions d’améliorations (ex. intégration CMS, i18n)."

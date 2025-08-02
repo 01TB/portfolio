@@ -2,7 +2,7 @@ Je me nomme Tsitohaina Berthin RAMANANKIRAHINA, étudiant en 2e année dans une 
 
 Je souhaite faire un portfolio en tant qu'étudiant développeur en informatique.
 
-Framework : Next.js
+Framework : Next.js avec Tailwind
 
 Voici une structure claire pour ton portfolio d’étudiant développeur, en tenant compte de tes compétences et de ton statut (2e année à IT University Madagascar).
 🎯 Sections indispensables pour ton portfolio
