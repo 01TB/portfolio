@@ -13,17 +13,17 @@ const Skills = () => {
     {
       icon: <Globe className="w-8 h-8" />,
       title: 'Frameworks',
-      skills: ['Django', 'Spring Boot', 'React.js', 'Node.js', 'NestJS', 'JSP']
+      skills: ['Django', 'Spring Boot', 'React.js', 'VueJS', 'NestJS', 'Laravel']
     },
     {
       icon: <Database className="w-8 h-8" />,
       title: 'Bases de données',
-      skills: ['MySQL', 'PostgreSQL', 'Oracle']
+      skills: ['MySQL', 'PostgreSQL', 'Microsoft Access', 'Oracle', 'MongoDB']
     },
     {
       icon: <Wrench className="w-8 h-8" />,
       title: 'Outils',
-      skills: ['Git', 'MVC', 'Gestion de projet web', 'Pack Office']
+      skills: ['Git & GitHub', 'Docker', 'Design Pattern MVC', 'JetBrains Toolkit', 'Pack Office']
     }
   ]
 
