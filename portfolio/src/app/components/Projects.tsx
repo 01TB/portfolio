@@ -79,6 +79,19 @@ const Projects = () => {
       ],
       category: 'Enterprise Software',
       features: ['Sourcing & Candidature', 'Tri & Filtrage Intelligent', 'Suivi Recruteur', 'Migration Administrative']
+    },
+    {
+      title: 'Absolute Cinema - Système de Gestion de Cinéma',
+      description: 'Web Application dédiée à la gestion des films, des séances, des réservations et jusqu\'aux finances dans un cinéma.',
+      technologies: ['Springboot', 'Thymeleaf', 'PostgreSQL'],
+      link: "https://cinema-23ae.onrender.com/absolutecinema",
+      images: [
+        '/images/projects/cinema-1.png',
+        '/images/projects/cinema-2.png',
+        '/images/projects/cinema-3.png'
+      ],
+      category: 'Enterprise Software',
+      features: ['Gestion des Films & Séances', 'Dashboard des recettes en pubs, séances & produits', 'Système d\'abonnement']
     }
   ]
 
@@ -140,6 +153,12 @@ const Projects = () => {
                 className="card group hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
                 {/* Project Image avec Carousel */}
+                <a
+                  href={project.link || undefined}
+                  target={project.link ? '_blank' : undefined}
+                  rel={project.link ? 'noopener noreferrer' : undefined}
+                  className={project.link ? 'cursor-pointer' : 'cursor-default pointer-events-none'}
+                >
                 <div className="relative h-48 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg mb-4 overflow-hidden">
                   <Image
                     src={project.images[currentImageIndex]}
@@ -225,6 +244,7 @@ const Projects = () => {
                     </div>
                   )}
                 </div>
+                </a>
 
                 <div className="space-y-3">
                   <h3 className="text-xl font-semibold text-gray-900 group-hover:text-primary-600 transition-colors duration-200 line-clamp-2">

@@ -35,7 +35,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/cv.pdf" download className="btn-primary">
+              <a href="/CV_Tsitohaina Berthin_RAMANANKIRAHINA.pdf" download className="btn-primary">
                 <Download size={20} />
                 Télécharger mon CV
               </a>
