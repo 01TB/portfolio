@@ -92,6 +92,24 @@ const Projects = () => {
       ],
       category: 'Enterprise Software',
       features: ['Gestion des Films & Séances', 'Dashboard des recettes en pubs, séances & produits', 'Système d\'abonnement']
+    },
+    {
+      title: 'RoadWork - Système de signalement routier',
+      description: 'Solution Cloud permettant le signalement citoyen des dégradations routières et leur suivi en temps réel par les autorités compétentes[cite: 188].',
+      technologies: ['VueJS', 'Firebase', 'Docker', 'OpenStreetMap'],
+      images: [
+        '/images/projects/roadwork-1.png',
+        '/images/projects/roadwork-2.png',
+        '/images/projects/roadwork-3.png',
+        '/images/projects/roadwork-4.png'
+      ],
+      category: 'Cloud & Mobile Application',
+      features: [
+        'Signalement géolocalisé avec photos [cite: 251]',
+        'Carte interactive des incidents (Leaflet) [cite: 167, 185]',
+        'Tableau de bord manager avec statistiques [cite: 253]',
+        'Notifications en temps réel [cite: 239]'
+      ]
     }
   ]
 
@@ -153,12 +171,6 @@ const Projects = () => {
                 className="card group hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
                 {/* Project Image avec Carousel */}
-                <a
-                  href={project.link || undefined}
-                  target={project.link ? '_blank' : undefined}
-                  rel={project.link ? 'noopener noreferrer' : undefined}
-                  className={project.link ? 'cursor-pointer' : 'cursor-default pointer-events-none'}
-                >
                 <div className="relative h-48 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg mb-4 overflow-hidden">
                   <Image
                     src={project.images[currentImageIndex]}
@@ -224,12 +236,18 @@ const Projects = () => {
                   )}
                   
                   {/* Overlay with external link icon */}
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <ExternalLink className="w-8 h-8 text-white bg-primary-600 p-2 rounded-full" />
+                  <a
+                  href={project.link || undefined}
+                  target={project.link ? '_blank' : undefined}
+                  rel={project.link ? 'noopener noreferrer' : undefined}
+                  className={project.link ? 'cursor-pointer' : 'cursor-default pointer-events-none'}
+                  >
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <ExternalLink className="w-8 h-8 text-white bg-primary-600 p-2 rounded-full" />
+                      </div>
                     </div>
-                  </div>
-                  
+                  </a>
                   {/* Category badge */}
                   <div className="absolute top-3 left-3 bg-white bg-opacity-90 px-2 py-1 rounded-full z-10">
                     <span className="text-xs font-medium text-primary-600">{project.category}</span>
@@ -244,7 +262,6 @@ const Projects = () => {
                     </div>
                   )}
                 </div>
-                </a>
 
                 <div className="space-y-3">
                   <h3 className="text-xl font-semibold text-gray-900 group-hover:text-primary-600 transition-colors duration-200 line-clamp-2">
