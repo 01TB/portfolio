@@ -95,7 +95,7 @@ const Projects = () => {
     },
     {
       title: 'RoadWork - Système de signalement routier',
-      description: 'Solution Cloud permettant le signalement citoyen des dégradations routières et leur suivi en temps réel par les autorités compétentes[cite: 188].',
+      description: 'Solution Cloud permettant le signalement citoyen des dégradations routières et leur suivi en temps réel par les autorités compétentes.',
       technologies: ['VueJS', 'Firebase', 'Docker', 'OpenStreetMap'],
       images: [
         '/images/projects/roadwork-1.png',
@@ -105,10 +105,10 @@ const Projects = () => {
       ],
       category: 'Cloud & Mobile Application',
       features: [
-        'Signalement géolocalisé avec photos [cite: 251]',
-        'Carte interactive des incidents (Leaflet) [cite: 167, 185]',
-        'Tableau de bord manager avec statistiques [cite: 253]',
-        'Notifications en temps réel [cite: 239]'
+        'Signalement géolocalisé avec photos',
+        'Carte interactive des incidents (Leaflet)',
+        'Tableau de bord manager avec statistiques',
+        'Notifications en temps réel'
       ]
     }
   ]
