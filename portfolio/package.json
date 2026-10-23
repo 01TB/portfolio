@@ -6,14 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:images": "node --experimental-strip-types --no-warnings scripts/generate-images.mjs"
   },
   "dependencies": {
-    "next": "14.0.0",
+    "lucide-react": "^0.263.1",
+    "next": "14.2.35",
     "react": "^18",
-    "react-dom": "^18",
-    "framer-motion": "^10.16.0",
-    "lucide-react": "^0.263.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -21,7 +21,7 @@
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
     "eslint": "^8",
-    "eslint-config-next": "14.0.0",
+    "eslint-config-next": "14.2.35",
     "postcss": "^8",
     "tailwindcss": "^3",
     "typescript": "^5"

@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio – Tsitohaina Berthin RAMANANKIRAHINA
 
-## Getting Started
+Portfolio bilingue (FR / EN) de développeur Full Stack & Mobile, construit avec Next.js 14 (App Router) et Tailwind CSS.
 
-First, run the development server:
+- Production : https://portfolio-tsitohaina-berthin-ramana.vercel.app
+- Français : `/` · Anglais : `/en`
+
+## Démarrer
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # build de production (toutes les pages sont statiques)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Modifier le contenu
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tout le texte est dans `src/content/`, pas dans les composants :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Fichier | Contenu |
+| --- | --- |
+| `site.ts` | URL du site, coordonnées, liens LinkedIn/GitHub, chemin du CV et de la photo |
+| `fr.ts` / `en.ts` | Textes de chaque langue (titres SEO, accueil, services, expérience, projets…) |
+| `projects.ts` | Projets : stack, captures d'écran, lien de démo, mise en avant ou non |
 
-## Learn More
+Pour ajouter un projet : l'ajouter dans `projects.ts` (avec un `slug`), puis ajouter son texte sous ce même `slug` dans `fr.ts` **et** `en.ts`. TypeScript signale une erreur si une traduction manque.
 
-To learn more about Next.js, take a look at the following resources:
+## Images de partage et icônes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+L'aperçu affiché lors du partage du lien (LinkedIn, WhatsApp…) et les favicons sont des PNG statiques dans `src/app/`. Après un changement de photo, de titre ou d'accroche, les régénérer :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run generate:images
+```
 
-## Deploy on Vercel
+## SEO
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Métadonnées par langue, `canonical` et `hreflang` : `src/lib/seo.ts`
+- Données structurées schema.org (Person, WebSite, ProfilePage) : `buildJsonLd` dans `src/lib/seo.ts`
+- `sitemap.xml`, `robots.txt` et `manifest.webmanifest` générés depuis `src/app/`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Après le déploiement, soumettre `https://portfolio-tsitohaina-berthin-ramana.vercel.app/sitemap.xml` dans Google Search Console.
