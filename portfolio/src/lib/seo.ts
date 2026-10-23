@@ -92,6 +92,13 @@ export function buildJsonLd(locale: Locale) {
         image: new URL(person.photo, SITE_URL).toString(),
         email: `mailto:${person.email}`,
         telephone: person.phone.replace(/\s/g, ''),
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'WhatsApp',
+          telephone: person.whatsapp.replace(/\s/g, ''),
+          url: person.whatsappHref,
+          availableLanguage: ['fr', 'en'],
+        },
         address: {
           '@type': 'PostalAddress',
           addressLocality: person.city,

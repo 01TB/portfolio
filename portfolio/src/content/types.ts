@@ -122,6 +122,7 @@ export type Dictionary = {
     intro: string
     emailLabel: string
     phoneLabel: string
+    whatsappLabel: string
     locationLabel: string
     socialTitle: string
     form: {

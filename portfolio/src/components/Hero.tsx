@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ArrowRight, Briefcase, Download, Github, Linkedin, Mail, MapPin } from 'lucide-react'
+import { ArrowRight, Briefcase, Download, Github, Linkedin, Mail, MapPin, MessageCircle } from 'lucide-react'
 import { person, sectionIds } from '@/content/site'
 import type { Dictionary } from '@/content/types'
 
@@ -62,6 +62,9 @@ export default function Hero({ dict }: { dict: Dictionary }) {
               </a>
               <a href={person.github} target="_blank" rel="noopener noreferrer me" className="icon-btn" aria-label="GitHub">
                 <Github className="h-5 w-5" aria-hidden="true" />
+              </a>
+              <a href={person.whatsappHref} target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="WhatsApp">
+                <MessageCircle className="h-5 w-5" aria-hidden="true" />
               </a>
               <a href={`mailto:${person.email}`} className="icon-btn" aria-label={person.email}>
                 <Mail className="h-5 w-5" aria-hidden="true" />

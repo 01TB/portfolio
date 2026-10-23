@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
+import { Github, Linkedin, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import { person, sectionIds } from '@/content/site'
 import type { Dictionary } from '@/content/types'
 import ContactForm from './ContactForm'
@@ -10,6 +10,7 @@ export default function Contact({ dict }: { dict: Dictionary }) {
   const channels = [
     { icon: Mail, label: t.emailLabel, value: person.email, href: `mailto:${person.email}` },
     { icon: Phone, label: t.phoneLabel, value: person.phone, href: person.phoneHref },
+    { icon: MessageCircle, label: t.whatsappLabel, value: person.whatsapp, href: person.whatsappHref, external: true },
     { icon: MapPin, label: t.locationLabel, value: dict.hero.location },
   ]
 
@@ -21,7 +22,7 @@ export default function Contact({ dict }: { dict: Dictionary }) {
           <SectionHeading id="contact-title" eyebrow={t.eyebrow} title={t.title} intro={t.intro} />
 
           <ul data-reveal className="mt-10 space-y-5">
-            {channels.map(({ icon: Icon, label, value, href }) => (
+            {channels.map(({ icon: Icon, label, value, href, external }) => (
               <li key={label} className="flex items-center gap-4">
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-primary-600 shadow-sm ring-1 ring-slate-200 dark:bg-slate-900 dark:text-primary-300 dark:ring-slate-800">
                   <Icon className="h-5 w-5" aria-hidden="true" />
@@ -29,7 +30,10 @@ export default function Contact({ dict }: { dict: Dictionary }) {
                 <div className="min-w-0">
                   <p className="text-sm text-slate-500 dark:text-slate-400">{label}</p>
                   {href ? (
-                    <a href={href} className="break-words font-medium text-slate-900 hover:text-primary-600 dark:text-white dark:hover:text-primary-300">
+                    <a
+                      href={href}
+                      {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      className="break-words font-medium text-slate-900 hover:text-primary-600 dark:text-white dark:hover:text-primary-300">
                       {value}
                     </a>
                   ) : (

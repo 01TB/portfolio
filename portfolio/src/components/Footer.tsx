@@ -1,4 +1,4 @@
-import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowUp, Github, Linkedin, Mail, MessageCircle } from 'lucide-react'
 import { person, sectionIds } from '@/content/site'
 import type { Dictionary } from '@/content/types'
 
@@ -47,11 +47,17 @@ export default function Footer({ dict }: { dict: Dictionary }) {
               <a href={person.phoneHref} className="block hover:text-primary-600 dark:hover:text-primary-300">
                 {person.phone}
               </a>
+              <a href={person.whatsappHref} target="_blank" rel="noopener noreferrer" className="block hover:text-primary-600 dark:hover:text-primary-300">
+                {person.whatsapp} (WhatsApp)
+              </a>
               <p>{dict.hero.location}</p>
             </address>
             <div className="mt-5 flex gap-2">
               <a href={`mailto:${person.email}`} className="icon-btn" aria-label={person.email}>
                 <Mail className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a href={person.whatsappHref} target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="WhatsApp">
+                <MessageCircle className="h-4 w-4" aria-hidden="true" />
               </a>
               <a href={person.linkedin} target="_blank" rel="noopener noreferrer me" className="icon-btn" aria-label="LinkedIn">
                 <Linkedin className="h-4 w-4" aria-hidden="true" />

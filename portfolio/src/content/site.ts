@@ -22,6 +22,8 @@ export const person = {
   email: 'tsitohaina.berthin@gmail.com',
   phone: '+261 38 49 829 63',
   phoneHref: 'tel:+261384982963',
+  whatsapp: '+261 32 65 494 45',
+  whatsappHref: 'https://wa.me/261326549445',
   city: 'Antananarivo',
   country: 'Madagascar',
   countryCode: 'MG',

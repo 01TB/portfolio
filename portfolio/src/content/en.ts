@@ -331,6 +331,7 @@ export const en: Dictionary = {
     intro: 'An app idea, a freelance mission or an open position? Drop me a line and I will get back to you quickly.',
     emailLabel: 'Email',
     phoneLabel: 'Phone',
+    whatsappLabel: 'WhatsApp',
     locationLabel: 'Location',
     socialTitle: 'You can also find me on',
     form: {
@@ -352,7 +353,7 @@ export const en: Dictionary = {
   footer: {
     tagline: 'Full Stack & Mobile developer specialized in Java (Spring Boot) and React. Based in Antananarivo, Madagascar.',
     rights: 'All rights reserved.',
-    builtWith: 'Built with Next.js and Tailwind CSS',
+    builtWith: '',
     backToTop: 'Back to top',
     navTitle: 'Navigation',
     contactTitle: 'Contact',
